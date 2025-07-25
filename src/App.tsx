@@ -13,10 +13,7 @@ import {
   MapPin,
   Github,
   Linkedin,
-  Twitter,
-  Instagram,
   Award,
-  Trophy,
   Calendar,
   Send
 } from 'lucide-react';
@@ -89,61 +86,21 @@ function App() {
       color: 'text-orange-500'
     },
   ];
-const handleAnimationComplete = () => {
-  console.log("All letters have animated!");
-};
-
 
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
 
   return (
-<<<<<<< HEAD
     <div className="relative min-h-screen overflow-hidden">
       {/* 🔹 Particle Background */}
       <div className="fixed inset-0 -z-10 bg-black">
         <Particles particleCount={200} particleColor="#ffffff" />
       </div>
-=======
-  <div className="relative min-h-screen overflow-hidden">
-    {/* 🔹 Particle Background */}
-    <div className="fixed inset-0 -z-10 bg-black">
-  <Particles particleCount={200} particleColor="#ffffff" />
-</div>
-
-    {/* 🔸 Main Content */}
-    <div className="min-h-screen bg-transparent relative z-10">
-
-      {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              S Sridhar
-            </div>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
-                >
-                  {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              ))}
-            </div>
->>>>>>> 1e6f287792db0f6cac4bed014fb028887275dc89
 
       {/* 🔸 Main Content */}
       <div className="min-h-screen bg-transparent relative z-10">
 
-<<<<<<< HEAD
         {/* Navigation */}
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
           }`}>
@@ -152,125 +109,6 @@ const handleAnimationComplete = () => {
               <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 S SRIDHAR
               </div>
-=======
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2 p-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="block py-2 text-gray-300 hover:text-white transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <div className="animate-fade-in-up">
-            <SplitText
-  text="Hi, I'm S Sridhar"
-  className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-white"
-  delay={100}
-  duration={0.6}
-  ease="power3.out"
-  splitType="chars"
-  from={{ opacity: 0, y: 40 }}
-  to={{ opacity: 1, y: 0 }}
-  threshold={0.1}
-  rootMargin="-100px"
-  textAlign="center"
-  onLetterAnimationComplete={handleAnimationComplete}
-/>
-
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Subject Matter Expert | JAVA & MERN FSD Instructor | DevOps Engineer
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#projects"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                See My Work
-                <ChevronDown className="ml-2" size={20} />
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center px-8 py-3 border-2 border-purple-500 text-purple-400 rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-              >
-                Get In Touch
-                <Mail className="ml-2" size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-      </section>
-
-      
-
-{/* About Section */}
-<section id="about" className="py-20 relative">
-  <BlurSection delay={100} direction="bottom">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">About Me</h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Passionate about creating innovative solutions and mentoring the next generation of developers
-        </p>
-      </div>
-      
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="relative">
-          <div className="w-80 h-80 mx-auto relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30"></div>
-            <img
-              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
-              alt="Profile"
-              className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white/20"
-            />
-          </div>
-        </div>
-        
-        <div className="space-y-6">
-          <p className="text-gray-300 text-lg leading-relaxed">
-            Hello! I'm a self-motivated and detail-oriented web expert and instructor with a passion for creating 
-            a bright future for my learners. I specialize in creating beautiful, responsive, and user-friendly websites.
-          </p>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            I specialize in Full Stack Development with expertise in cloud technologies and DevOps, 
-            always staying updated with the latest industry trends and best practices.
-          </p>
-          
-          <div className="grid sm:grid-cols-2 gap-4 mt-8">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-slate-700">
-              <MapPin className="text-blue-400 mb-2" size={20} />
-              <div className="text-white font-semibold">Location</div>
-              <div className="text-gray-400">Chennai, India</div>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-slate-700">
-              <Mail className="text-purple-400 mb-2" size={20} />
-              <div className="text-white font-semibold">Email</div>
-              <div className="text-gray-400">sridhars0305@gmail.com</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </BlurSection>
-</section>
->>>>>>> 1e6f287792db0f6cac4bed014fb028887275dc89
 
               {/* Desktop Navigation */}
               <div className="hidden md:flex space-x-8">
@@ -334,7 +172,7 @@ const handleAnimationComplete = () => {
               />
 
               <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Computer Science Student | Software Development Enthusiast | Passionate about AI and ML
+                Computer Science Student | Software Development Enthusiast
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -376,10 +214,10 @@ const handleAnimationComplete = () => {
                   <div className="w-80 h-80 mx-auto relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30"></div>
                     <img
-    src={profileImage}
-    alt="S Sridhar Profile"
-    className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white/20"
-/>
+                      src={profileImage}
+                      alt="S Sridhar Profile"
+                      className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white/20"
+                    />
                   </div>
                 </div>
 
@@ -439,8 +277,44 @@ const handleAnimationComplete = () => {
             </div>
           </div>
         </section>
-
         
+        {/* Projects Section */}
+        <section id="projects" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Featured Project</h2>
+                    <p className="text-gray-400 text-lg">A highlight of my practical work</p>
+                </div>
+                <div className="flex justify-center">
+                    {projects.map((project, index) => (
+                        <div key={index} className="group max-w-lg relative bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105">
+                            <div className="relative overflow-hidden">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                                <p className="text-gray-400 mb-4 line-clamp-3">{project.description}</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {project.tags.map((tag, tagIndex) => (
+                                        <span
+                                            key={tagIndex}
+                                            className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
 
         {/* Skills Section */}
         <section id="skills" className="py-20 bg-slate-800/20">
@@ -612,7 +486,6 @@ const handleAnimationComplete = () => {
         </footer>
       </div>
     </div>
-  </div>
   );
 }
 
